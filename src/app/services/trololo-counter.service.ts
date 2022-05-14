@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Logger } from '../interfaces/logger';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(
+  {
+    providedIn: 'root'
+  }
+)
 export class TrololoCounterService implements Logger {
   private counterState: number = 0;
 

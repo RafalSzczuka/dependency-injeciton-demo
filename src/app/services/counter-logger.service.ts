@@ -1,4 +1,4 @@
-import { Inject, Injectable, Optional } from '@angular/core';
+import { Inject, Injectable, OnDestroy, Optional } from '@angular/core';
 import { LOGGER_SOURCE } from '../constants/injection-tokens';
 import { Logger } from '../interfaces/logger';
 
@@ -7,7 +7,7 @@ import { Logger } from '../interfaces/logger';
     providedIn: "root"
   }
 )
-export class CounterLoggerService implements Logger {
+export class CounterLoggerService implements Logger, OnDestroy {
   private counterState: number = 0;
 
   public get counter() {
@@ -15,6 +15,10 @@ export class CounterLoggerService implements Logger {
   }
 
   constructor(@Optional() @Inject(LOGGER_SOURCE) private source: string) { }
+
+  public ngOnDestroy(): void {
+    console.log("DESTROY", this.source)
+  }
 
   public increment(): void {
     this.counterState++;

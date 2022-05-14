@@ -4,7 +4,8 @@ import { CounterLoggerService } from 'src/app/services/counter-logger.service';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.scss']
+  styleUrls: ['./shop.component.scss'],
+  // providers: [CounterLoggerService]
 })
 export class ShopComponent {
 

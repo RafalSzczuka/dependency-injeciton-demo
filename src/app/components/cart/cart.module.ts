@@ -6,6 +6,7 @@ import { CommonUiModule } from '../common/common-ui.module';
 import { CounterLoggerService } from 'src/app/services/counter-logger.service';
 import { TrololoCounterService } from 'src/app/services/trololo-counter.service';
 import { ChildComponent } from '../child/child.component';
+import { LOGGER_SOURCE } from 'src/app/constants/injection-tokens';
 
 
 
@@ -20,9 +21,14 @@ import { ChildComponent } from '../child/child.component';
     CommonUiModule
   ],
   providers: [
+    // CounterLoggerService,
     // {
     //   provide: CounterLoggerService,
     //   useExisting: TrololoCounterService
+    // },
+    // {
+    //   provide: LOGGER_SOURCE,
+    //   useValue: "CART"
     // }
   ]
 })
