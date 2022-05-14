@@ -17,11 +17,11 @@ import { LOGGER_SOURCE } from 'src/app/constants/injection-tokens';
     CommonUiModule
   ],
   providers: [
-    CounterLoggerService,
-    {
-      provide: LOGGER_SOURCE,
-      useValue: "SHOP"
-    }
+    // CounterLoggerService,
+    // {
+    //   provide: LOGGER_SOURCE,
+    //   useValue: "SHOP"
+    // }
   ]
 })
 export class ShopModule { }

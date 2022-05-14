@@ -20,10 +20,10 @@ import { ChildComponent } from '../child/child.component';
     CommonUiModule
   ],
   providers: [
-    {
-      provide: CounterLoggerService,
-      useExisting: TrololoCounterService
-    }
+    // {
+    //   provide: CounterLoggerService,
+    //   useExisting: TrololoCounterService
+    // }
   ]
 })
 export class CartModule { }

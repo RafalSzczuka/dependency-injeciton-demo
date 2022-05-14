@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { CounterLoggerService } from 'src/app/services/counter-logger.service';
 
 @Component({
@@ -7,13 +7,10 @@ import { CounterLoggerService } from 'src/app/services/counter-logger.service';
   styleUrls: ['./action-btn.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ActionBtnComponent implements OnInit {
+export class ActionBtnComponent {
   @Input() public label: string = "Action btn";
 
   constructor(private counterService: CounterLoggerService) { }
-
-  ngOnInit(): void {
-  }
 
   public onClick(): void {
     this.counterService.increment();
