@@ -22,6 +22,7 @@ import { LOGGER_SOURCE } from 'src/app/constants/injection-tokens';
   ],
   providers: [
     // CounterLoggerService,
+    // TrololoCounterService,
     // {
     //   provide: CounterLoggerService,
     //   useExisting: TrololoCounterService
