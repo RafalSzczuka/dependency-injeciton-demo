@@ -19,6 +19,10 @@ import { LOGGER_SOURCE } from 'src/app/constants/injection-tokens';
   providers: [
     // CounterLoggerService,
     // {
+    //   provide: CounterLoggerService,
+    //   useClass: CounterLoggerService // new CounterLogger...
+    // }
+    // {
     //   provide: LOGGER_SOURCE,
     //   useValue: "SHOP"
     // }
